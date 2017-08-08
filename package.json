@@ -1,0 +1,12 @@
+{
+  "name": "com.plugin.score",
+  "version": "1.0.0",
+  "description": "this plugin is about appstore to score",
+  "platforms": [
+    "android",
+    "ios"
+  ],
+  "keywords": [],
+  "author": "yilei",
+  "license": "ISC"
+}
