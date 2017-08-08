@@ -1,0 +1,35 @@
+<?xml version='1.0' encoding='utf-8'?>
+<plugin id="com.plugin.score" 
+        version="1.0.0" 
+        xmlns="http://apache.org/cordova/ns/plugins/1.0" 
+        xmlns:android="http://schemas.android.com/apk/res/android">
+        
+    <name>score</name>
+        <js-module name="score" src="www/score.js">
+        <clobbers target="cordova.plugins.score" />
+    </js-module>
+    
+    <platform name="android">
+    
+        <config-file parent="/*" target="res/xml/config.xml">
+          <feature name="score">
+            <param name="android-package" value="com.plugin.score.score" />
+         </feature>
+        </config-file>
+
+        <config-file parent="/*" target="AndroidManifest.xml">
+        </config-file>
+
+        <source-file src="src/android/score.java" target-dir="src/com/plugin/score/score" />
+    </platform>
+	
+	<platform name="ios">
+        <config-file parent="/*" target="config.xml">
+          <feature name="score">
+            <param name="ios-package" value="score" />
+          </feature>
+        </config-file>
+        <source-file src="src/ios/score.m" />
+    </platform>
+    
+</plugin>
